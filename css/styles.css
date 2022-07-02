@@ -100,9 +100,12 @@ body {
 }
 
 /* ------------------------HEADER-------------------------- */
+.logotype {
+	margin-right: 93px;
+}
+
 .header-logo {
 	color: var(--logo-color);
-	margin-right: 93px;
 }
 .header {
 	background-color: var(--first-light-color);
@@ -118,18 +121,13 @@ body {
 }
 .header-list {
 	display: flex;
+	gap: 50px;
 }
-.header-item:not(last-child) {
-	margin-right: 50px;
-}
-.header-item {
-	display: inline-block;
-	padding-top: 32px;
-	padding-bottom: 32px;
-}
+
 .header-contacts {
 	display: flex;
 	margin-left: auto;
+	gap: 50px;
 }
 .header-link,
 .header-contact {
@@ -138,15 +136,17 @@ body {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
-.header-contact:not(last-child) {
-	margin-right: 50px;
-}
 
 .header-link {
 	color: var(--second-btn-color);
+	display: inline-block;
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 .header-contact {
 	color: var(--text-color);
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .header-link.current {
@@ -198,9 +198,11 @@ body {
 /* ----------------------BENEFITS----------------------- */
 .benefits {
 	display: flex;
+	gap: 30px;
 }
+
 .benefit-item {
-	width: 270px;
+	flex-basis: calc(100% / 4 - 30px);
 }
 .benefits-title {
 	font-size: 14px;
@@ -223,11 +225,10 @@ body {
 }
 .work-list {
 	display: flex;
-	margin-left: -30px;
+	gap: 30px;
 }
 .item {
-	flex-basis: calc((100% - 90px) / 3);
-	margin-left: 30px;
+	flex-basis: calc((100% - 3 * 30px) / 3);
 }
 /* ----------------------OUR TEAM----------------------- */
 .our-team {
@@ -235,7 +236,7 @@ body {
 }
 .team-list {
 	display: flex;
-	margin-left: -30px;
+	gap: 30px;
 }
 .team-member {
 	width: 270px;
@@ -243,23 +244,23 @@ body {
 	border: 1px solid transparent;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
-	padding-bottom: 30px;
 	flex-basis: calc(100% / 4 - 30px);
-	margin-left: 30px;
+}
+.team-description {
+	padding-top: 30px;
+	text-align: center;
+	padding-bottom: 30px;
 }
 .team-title {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
-	text-align: center;
 	letter-spacing: 0.03em;
 	margin-bottom: 10px;
-	margin-top: 30px;
 }
 .team-text {
 	font-size: 16px;
 	line-height: 1.19;
-	text-align: center;
 	letter-spacing: 0.03em;
 }
 
@@ -267,6 +268,7 @@ body {
 
 .footer {
 	background: var(--dark-color);
+	padding-top: 60px;
 }
 .footer-logo {
 	color: var(--first-title-color);
@@ -305,8 +307,10 @@ body {
 .filters-list {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 34px;
+	margin-bottom: 50px;
+	gap: 8px;
 }
+
 .filter {
 	font-family: inherit;
 	font-weight: 500;
@@ -328,9 +332,7 @@ body {
 	color: var(--first-btn-color);
 	background: var(--accent-color);
 }
-.filter:not(last-child) {
-	margin-right: 8px;
-}
+
 /* -----------------------OUR WORKS------------------------- */
 .our-works {
 	display: flex;
